@@ -32,7 +32,7 @@ app.get('/api/token', async (req, res) => {
 app.get('/api/synthesize', async (req, res) => {
   try {
     const data = await axios.post(
-      `https://gateway-tok.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/ogg?voice=${req.query.voice}`,
+      `https://gateway-tok.watsonplatform.net/text-to-speech/api/v1/synthesize?accept=audio/ogg&voice=${req.query.voice}`,
       {
         text: req.query.text,
         access_token: req.query.access_token
