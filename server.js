@@ -41,7 +41,8 @@ app.get('/api/synthesize', async (req, res) => {
       {
         responseType: 'arraybuffer',
         headers: {
-          Authorization: `Bearer ${req.query.access_token}`
+          Authorization: `Bearer ${req.query.access_token}`,
+          'Content-Type': 'application/json'
         }
       }
     )
